@@ -8,12 +8,12 @@ public class Main {
         if (Run.countOfAnimal == 2) {
             Animals horse = new Horse();
         }
-//        if (Run.countOfAnimal == 3) {
-//            Animals dog = new Dog();
-//        }
-//        if (Run.countOfAnimal == 4) {
-//            Animals pussy = new Pussy();
-//        }
+        if (Run.countOfAnimal == 3) {
+            Animals dog = new Dog();
+        }
+        if (Run.countOfAnimal == 4) {
+            Animals pussy = new Pussy();
+        }
     }
 
 }
