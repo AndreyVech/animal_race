@@ -1,13 +1,20 @@
+//классы животных однотипны и создаются ctrl+c - ctrl+v
 import java.util.Scanner;
 
-public class Dog extends Animals{
-    private String voice = "ZA STALINA!!";
-    public Dog() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Как зовут собаку?  ");
-        String nameDog = scanner.next();
-        System.out.print("Какая скорость у "+ nameDog +" (м/с)?  ");
-        int speedDog = scanner.nextInt();
-        super.addAnimal (nameDog, speedDog, voice);
+public class Dog extends Animals implements AnimalVoice{
+    private String voice = "Doooooooog!!";
+
+    @Override
+    public void voice() {
+        voice(voice);
     }
+
+
+    public Dog(String nameAnimal, int speedAnimal) {
+        super(nameAnimal, speedAnimal);
+        voice();
+        super.run(nameAnimal, speedAnimal);
+    }
+
+
 }

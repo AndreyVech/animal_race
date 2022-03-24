@@ -1,18 +1,15 @@
 public class Main {
     public static void main(String[] args) {
         //первого персонажа создадим здесь
-        Animals cat = new Cat();
+        next(1);
     }
     //для остальных отдельный метод. На входе - порядковый номер персонажа
     public static void next(int x) {
-        if (Run.countOfAnimal == 2) {
-            Animals horse = new Horse();
-        }
-        if (Run.countOfAnimal == 3) {
-            Animals dog = new Dog();
-        }
-        if (Run.countOfAnimal == 4) {
-            Animals pussy = new Pussy();
+        switch (x) {
+            case 1: Animals cat = new Cat(utilInput.inputName("Cat"), utilInput.inputSpeed());
+            case 2: Animals horse = new Horse(utilInput.inputName("Horse"), utilInput.inputSpeed());
+            case 3: Animals dog = new Dog(utilInput.inputName("Dog"), utilInput.inputSpeed());
+            case 4: Animals pussy = new Pussy(utilInput.inputName("Pussy"), utilInput.inputSpeed());
         }
     }
 
