@@ -38,7 +38,5 @@ abstract public class Animals implements AnimalVoice{
         //и зовем следующего
         Main.next(countOfAnimal);
     }
-
-    public abstract void voice();
 }
 
