@@ -1,9 +1,9 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 
-abstract public class Animals implements AnimalVoice{
+abstract public class Animals implements AnimalVoice {
     private String nameAnimal;
     private int speedAnimal;
-    private int countOfAnimal = 1;
+    private int countOfAnimals = 0;
 
     public String getNameAnimal() {
         return nameAnimal;
@@ -21,6 +21,7 @@ abstract public class Animals implements AnimalVoice{
         this.speedAnimal = speedAnimal;
     }
 
+
     public Animals(String nameAnimal, int speedAnimal) {
         this.nameAnimal = nameAnimal;
         this.speedAnimal = speedAnimal;
@@ -30,13 +31,16 @@ abstract public class Animals implements AnimalVoice{
         //старт и финиш дистанции (в метрах)
         int distance = 0;
         double finish = 1000;
-        double time = finish / speed ;
-        String result = String.format("%s пробегает 1000м за %.2f сек, со скоростью %s м/с",getNameAnimal(), time, getSpeedAnimal());
+        double time = finish / speed;
+        String result = String.format("%s пробегает 1000м за %.2f сек, со скоростью %s м/с", getNameAnimal(), time, getSpeedAnimal());
         System.out.println(result);
-        //считаем животного
-        countOfAnimal ++;
         //и зовем следующего
-        Main.next(countOfAnimal);
+        this.countOfAnimals++;
+        Main.next(countOfAnimals);
     }
+//    public void addRunner(String nameAnimal){
+//        runners[runners.length+1] = nameAnimal;
+//        System.out.println(runners.length);
+//    }
 }
 

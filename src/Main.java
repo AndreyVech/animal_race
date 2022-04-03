@@ -3,13 +3,22 @@ public class Main {
         //первого персонажа создадим здесь
         next(1);
     }
+
     //для остальных отдельный метод. На входе - порядковый номер персонажа
     public static void next(int x) {
         switch (x) {
-            case 1: Animals cat = new Cat(utilInput.inputName("Cat"), utilInput.inputSpeed());
-            case 2: Animals horse = new Horse(utilInput.inputName("Horse"), utilInput.inputSpeed());
-            case 3: Animals dog = new Dog(utilInput.inputName("Dog"), utilInput.inputSpeed());
-            case 4: Animals pussy = new Pussy(utilInput.inputName("Pussy"), utilInput.inputSpeed());
+            case 1:
+                Animals cat = new Cat(utilInput.inputName("Cat"), utilInput.inputSpeed());
+                break;
+            case 2:
+                Animals horse = new Horse(utilInput.inputName("Horse"), utilInput.inputSpeed());
+                break;
+            case 3:
+                Animals dog = new Dog(utilInput.inputName("Dog"), utilInput.inputSpeed());
+                break;
+            case 4:
+                Animals pussy = new Pussy(utilInput.inputName("Pussy"), utilInput.inputSpeed());
+                break;
         }
     }
 

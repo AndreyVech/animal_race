@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Dog extends Animals implements AnimalVoice{
     private String voice = "Doooooooog!!";
 
-    @Override
     public void voice() {
         voice(voice);
     }

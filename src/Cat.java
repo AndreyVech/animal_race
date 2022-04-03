@@ -3,7 +3,6 @@
 public class Cat extends Animals implements AnimalVoice {
     private String voice = "Meeeooww";
 
-    @Override
     public void voice() {
         voice(voice);
     }
@@ -13,8 +12,6 @@ public class Cat extends Animals implements AnimalVoice {
         voice();
         super.run(nameAnimal, speedAnimal);
     }
-
-
 }
 
 

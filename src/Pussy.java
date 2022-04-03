@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Pussy extends Animals implements AnimalVoice {
     private String voice = "pusssssyyyyyyyy!!!";
 
-    @Override
     public void voice() {
         voice(voice);
     }
