@@ -3,7 +3,7 @@ import java.util.ArrayList;
 abstract public class Animals implements AnimalVoice {
     private String nameAnimal;
     private int speedAnimal;
-    private int countOfAnimals = 0;
+    private static int countOfAnimals;
 
     public String getNameAnimal() {
         return nameAnimal;
@@ -25,6 +25,7 @@ abstract public class Animals implements AnimalVoice {
     public Animals(String nameAnimal, int speedAnimal) {
         this.nameAnimal = nameAnimal;
         this.speedAnimal = speedAnimal;
+        this.countOfAnimals++;
     }
 
     public void run(String name, int speed) {
@@ -35,7 +36,7 @@ abstract public class Animals implements AnimalVoice {
         String result = String.format("%s пробегает 1000м за %.2f сек, со скоростью %s м/с", getNameAnimal(), time, getSpeedAnimal());
         System.out.println(result);
         //и зовем следующего
-        this.countOfAnimals++;
+
         Main.next(countOfAnimals);
     }
 //    public void addRunner(String nameAnimal){
